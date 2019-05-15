@@ -1,2 +1,2 @@
-# scss-helpers-text-align
-SCSS | Helpers - Text align
+# Scss | Helpers - Text Align
+
