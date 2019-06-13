@@ -7,11 +7,11 @@ $helpers-text-align-class-prefix: 'txt-a' !default;
   
   @if $responsive {
     
-    @each $align in $alignments {
-      @each $classname in $breakpoint-classes {
-        @include breakpoint($classname) {
+    @each $classname in $breakpoint-classes {
+      @include breakpoint($classname) {
+        @each $align in $alignments {
           .#{$classname}-#{$helpers-text-align-class-prefix}-#{$align} {
-            text-align: $align;
+            text-align: $align !important;
           }
         }
       }
@@ -20,7 +20,7 @@ $helpers-text-align-class-prefix: 'txt-a' !default;
   } @else {
     @each $align in $alignments {
       .#{$helpers-text-align-class-prefix}-#{$align} {
-        text-align: $align;
+        text-align: $align !important;
       }
     }
   }
